@@ -1,0 +1,54 @@
+.school {
+  &__content {}
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 50px;
+    @media (max-width: 991px) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 100px;
+    margin-left: -20px;
+    @media (max-width: 991px) {
+      flex-direction: column;
+      align-items: center;
+      padding-top: 60px;
+    }
+  }
+
+  &__item {
+    width: 50%;
+    padding-bottom: 55px;
+    padding-left: 20px;
+    @media (max-width: 991px) {
+      width: 100%;
+    }
+  }
+}
+
+.bottom-title {
+  font-family: BlocC;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 1;
+  text-transform: uppercase;
+  color: #36575F;
+  padding-top: 20px;
+}
+
+.bottom-desc {
+  font-family: FuturaBookC;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 160%;
+  color: #181818;
+}

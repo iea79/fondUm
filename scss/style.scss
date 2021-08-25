@@ -1,0 +1,30 @@
+@import 'fonts';
+@import 'header';
+@import 'footer';
+@import 'fs-slider';
+@import 'template';
+@import 'index';
+@import 'endowment';
+@import 'documents';
+@import 'contacts';
+@import 'popup';
+
+.substrate {
+    overflow: hidden;
+}
+
+.page-thanks {
+    text-align: center;
+    padding: 50px 0;
+    font-family: FuturaBookC;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+
+    h2 {
+        font-family: BlocC;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 36px;
+    }
+}

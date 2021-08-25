@@ -1,0 +1,203 @@
+.documents {
+    &__title {
+        text-align: left;
+    }
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        @media (max-width: 991px) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__item {
+        background: #FFFFFF;
+        box-shadow: 0 4px 50px rgba(121, 214, 226, 0.15);
+        border-radius: 6px;
+        margin-bottom: 20px;
+        max-width: 560px;
+        padding: 24px 50px;
+        width: 50%;
+        @media (max-width: 991px) {
+            width: 100%;
+        }
+    }
+
+    &-item__content {
+        display: flex;
+        align-items: center;
+
+        a {
+            font-family: FuturaDemiC;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 120%;
+            color: #181818;
+            padding-left: 20px;
+            @media (max-width: 991px) {
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+.documents__top {
+    display: flex;
+    align-items: center;
+}
+
+.top__img {
+    display: block;
+    padding-right: 10px;
+}
+
+.reporting {
+    padding-top: 80px;
+
+    &__top {
+        display: flex;
+        align-items: center;
+
+        img {
+            padding-right: 20px;
+        }
+    }
+
+    &__title {
+        text-align: left;
+        // display: flex;
+        // &:before {
+        //     content: url("../img/reporting.svg");
+        //     display: block;
+        //     align-items: center;
+        //     padding-right: 20px;
+        //
+        // }
+    }
+
+    &__content {}
+
+    &__item {
+        background: #FFFFFF;
+        box-shadow: 0 4px 50px rgba(121, 214, 226, 0.15);
+        border-radius: 6px;
+        margin-bottom: 20px;
+        padding: 24px 50px;
+        width: 100%;
+
+        &.hidden {
+            display: none;
+        }
+    }
+
+    &-item__content {
+        display: flex;
+        align-items: center;
+
+        img {
+            display: block;
+        }
+
+        a {
+            font-family: FuturaDemiC;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 120%;
+            color: #181818;
+            padding-left: 20px;
+        }
+    }
+}
+
+.reporting__drop {
+    position: relative;
+    display: inline-block;
+    font-family: BlocC;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 120%;
+    text-transform: uppercase;
+    color: #FFFFFF;
+
+    &.open {
+        cursor: pointer;
+
+        .reporting-drop__list {
+            // padding: 5px 0;
+            // max-width: 150px;
+            // width: 100%;
+            height: auto;
+            box-shadow: 0 3px 6px 3px rgba(200, 200, 200, 0.5);
+            border-radius: 10px;
+            // background-color: #0765e2;
+            color: #fff;
+        }
+
+        .reporting-drop__item {
+            // padding: 5px 0;
+            padding: 10px;
+        }
+    }
+}
+
+.reporting-drop__name {
+    // position: relative;
+    // display: inline;
+    font-family: BlocC;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 120%;
+    text-transform: uppercase;
+    color: #0c68c7;
+    // border-bottom: #0c68c7 1px dashed;
+    margin-left: 10px;
+    // &:hover {
+    //     border-bottom: none;
+    //
+    // }
+}
+
+.reporting-drop__list {
+    position: absolute;
+    // list-style: none;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0;
+    transition: 0.3s;
+    // max-width: 180px;
+    // width: 100%;
+    height: 0;
+    overflow: hidden;
+    background: rgb(10, 99, 231);
+}
+
+.reporting-drop__item {
+    display: block;
+    padding: 0;
+    transition: 0.3s;
+    // max-width: 170px;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    color: #fff;
+
+    &:hover {
+        background: #fff;
+        // background: linear-gradient(93.13deg, #DD137B 3.5%, #441A6A 100%);
+        color: rgb(10, 99, 231);
+    }
+
+    &.active {
+        background: #fff;
+        color: rgb(10, 99, 231);
+    }
+}
+
+.item__content {}

@@ -1,0 +1,247 @@
+.form {
+    &Box__content {}
+
+    &Box__variant {}
+
+    &Box__variant-btn {}
+
+    &Box__amount {}
+
+    &Box__subtitle {}
+
+    &Box__payment {}
+
+    &Box__info {}
+
+    &Box__info-field {}
+
+    &Box__politic {}
+
+    &Box__action {}
+
+}
+
+.section {}
+
+.container_center {}
+
+.formBox {
+    max-width: 740px;
+    padding: 40px;
+    margin: 100px auto;
+    box-shadow: 0 20px 50px rgba(50, 63, 83, 0.3);
+
+    &__content {}
+
+    &__variant {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 30px;
+
+    }
+
+    &__variant-btn input[type=radio] {
+        display: none;
+    }
+
+    &__amount {}
+
+    &__amount-content {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__subtitle {
+        font-family: FuturaBookC;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 160%;
+        text-transform: uppercase;
+        color: #36575F;
+        margin-bottom: 20px;
+
+    }
+
+    &__payment {
+        margin-top: 30px;
+    }
+
+    &__info {
+        margin-top: 30px;
+    }
+
+    &__info-field {}
+
+    &__politic {}
+
+    &__action {
+        margin: 0 auto;
+        padding-top: 30px;
+    }
+
+}
+
+.formBox__variant-btn input[type=radio]:checked + label {
+    color: rgb(210, 105, 7);
+    border-bottom: 2px solid rgb(230, 82, 31);
+
+}
+
+.formBox__variant-btn label {
+    display: block;
+    font-family: FuturaDemiC;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 120%;
+    text-transform: uppercase;
+    color: #181818;
+    border-bottom: 2px solid #EDEDED;
+
+    padding: 0 50px;
+    max-width: 320px;
+    width: 100%;
+    padding-bottom: 15px;
+
+    &:hover {
+        // color: #666;
+        cursor: pointer;
+    }
+}
+
+.formBox__variant-btn {
+    padding: 0 50px;
+    max-width: 320px;
+    width: 100%;
+}
+
+.form_grid {}
+
+.btn {}
+
+.blue-button {}
+
+.amount__variant-btn input {
+    display: none;
+}
+
+.amount__variant-btn label {
+    display: block;
+    font-family: FuturaBookC;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #181818;
+
+    border: 2px solid #EDEDED;
+    border-radius: 4px;
+    // min-width: 150px;
+    max-width: 150px;
+    width: 100%;
+    padding: 14px 0;
+
+    &:hover {
+        // color: #666;
+        cursor: pointer;
+    }
+}
+
+.amount__variant-btn input[type=radio]:checked + label {
+    // color: rgb(210, 105, 7);
+    // border: 2px solid rgb(230, 82, 31);
+    border: 2px solid #FFD538;
+
+}
+
+.amount__variant-btn {
+    max-width: 144px;
+    width: 100%;
+    text-align: center;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+
+.amount__variant-field {
+    margin-top: 20px;
+    max-width: 475px;
+    width: 100%;
+}
+
+.amount__input {
+    display: block;
+    border: 2px solid #EDEDED;
+    border-radius: 4px;
+    width: 100%;
+    padding: 18px 25px 15px;
+    outline: none;
+
+}
+
+.payment__variant-btn {}
+
+.popup__checkbox {}
+
+.popup__checkbox-part {}
+
+.popup__checkbox-text {
+    font-family: FuturaBookC;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 160%;
+    color: #181818;
+}
+
+.popup-link {
+    font-family: FuturaBookC;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 1;
+    color: #4d72f5;
+    text-decoration: underline;
+}
+
+.formBox__info-field input[type=email],
+.formBox__info-field input[type=tel],
+.formBox__info-field input[type=text],
+.formBox__info-field textarea {
+    width: 100%;
+    max-width: 660px;
+    border-radius: 4px;
+    background: #fff;
+    padding: 20px 28px 15px;
+    border: 1px solid #EDEDED;
+    outline: none;
+    transition: all 0.3s;
+
+    font-family: FuturaBookC;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #181818;
+
+    margin-bottom: 20px;
+
+    &.invalid {
+        // border: 1px solid #f70404;
+        border: 4px solid transparent;
+        border-width: 2px;
+        border-image: linear-gradient(90deg, rgb(161,140,209) 0%, rgb(251,194,235) 100%);
+        border-image-slice: 1;
+        border-image-width: -1px;
+        // border-image-outset: initial;
+        // border-image-repeat: stretch;
+
+    }
+}
+
+.formBox__info-field textarea {
+    min-width: 660px;
+    min-height: 140px;
+}
