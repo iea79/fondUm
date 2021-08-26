@@ -9,7 +9,7 @@
 
 if ( ! defined( '_S_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
-	define( '_S_VERSION', '1.0.0' );
+	define( '_S_VERSION', '1.1.4' );
 }
 
 if ( ! function_exists( 'frondendie_setup' ) ) :
@@ -147,8 +147,8 @@ function frondendie_scripts() {
 	wp_enqueue_script( 'frondendie-slick', get_template_directory_uri() . '/js/slick.min.js', array(), _S_VERSION, true );
 	wp_enqueue_script( 'frondendie-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
 	wp_enqueue_script( 'frondendie-payment', get_template_directory_uri() . '/js/payment.js', array(), _S_VERSION, true );
-	wp_enqueue_script( 'frondendie-pdf', get_template_directory_uri() . '/js/pdfmake.min.js', array(), _S_VERSION, true );
-	wp_enqueue_script( 'frondendie-vfsfont', get_template_directory_uri() . '/js/vfs_fonts.js', array(), _S_VERSION, true );
+	// wp_enqueue_script( 'frondendie-pdf', get_template_directory_uri() . '/js/pdfmake.min.js', array(), _S_VERSION, true );
+	// wp_enqueue_script( 'frondendie-vfsfont', get_template_directory_uri() . '/js/vfs_fonts.js', array(), _S_VERSION, true );
 	wp_enqueue_script( 'frondendie-script', get_template_directory_uri() . '/js/script.js', array(), _S_VERSION, true );
 
 

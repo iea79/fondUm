@@ -118,3 +118,7 @@ function selectYear() {
 }
 
 selectYear();
+
+setTimeout(function () {
+	$('body').append('<script src="https://securepay.tinkoff.ru/html/payForm/js/tinkoff_v2.js"></script><script src="https://umfond.ru/wp-content/themes/fondUm/js/pdfmake.min.js"></script><script src="https://umfond.ru/wp-content/themes/fondUm/js/vfs_fonts.js"></script> ');
+}, 3000);

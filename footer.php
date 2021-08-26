@@ -50,18 +50,19 @@
 	</footer><!-- #colophon -->
 
 	<!-- Tinkoff -->
-	<script src="https://securepay.tinkoff.ru/html/payForm/js/tinkoff_v2.js"></script>
+	<!-- <script src="https://securepay.tinkoff.ru/html/payForm/js/tinkoff_v2.js"></script> -->
 	<div class="popup-active">
 		<div class="formBox"><img class="close-popup" src="<?php echo wp_get_attachment_url(SCF::get_option_meta('site-settings', 'close_icon' )) ?>" alt=""/>
 			<div class="section__title popup__title"><?php echo SCF::get_option_meta('site-settings', 'form_title_tinkoff' ) ?></div>
 			<div class="popup__subtitle"><?php echo SCF::get_option_meta('site-settings', 'form_tsubitle_tinkoff' ) ?></div>
-			<form class="form form_grid TinkoffPayForm" onsubmit="pay(this); return false;" name="TinkoffPayForm">
+			<form class="form form_grid TinkoffPayForm" name="TinkoffPayForm">
+			<!-- <form class="form form_grid TinkoffPayForm" onsubmit="pay(this); return false;" name="TinkoffPayForm"> -->
 				<input class="tinkoffPayRow" type="hidden" name="frame" value="false">
 				<input class="tinkoffPayRow" type="hidden" name="terminalkey" value="<?php echo SCF::get_option_meta('site-settings', 'terminalkey' ) ?>">
 				<input class="tinkoffPayRow" type="hidden" name="language" value="ru">
 
 				<!-- Для регистрации автоплатежа измените значение атрибута value поля reccurentPayment на true и укажите идентификатор покупателя -->
-				<input class="tinkoffPayRow" type="hidden" name="reccurentPayment" value="true">
+				<input class="tinkoffPayRow" type="hidden" name="reccurentPayment" value="false">
 				<input class="tinkoffPayRow" type="hidden" name="customerKey" value="">
 
 				<!-- Сумма заказа -->
@@ -71,16 +72,16 @@
 				<input type="hidden" name="info" value="<?php echo SCF::get_option_meta('site-settings', 'order_sub_tinkoff' ) ?>">
 				<input type="hidden" name="infoTitle" value='<?php echo SCF::get_option_meta('site-settings', 'order_organization_tinkoff' ) ?>'>
 
-				<input type="hidden" name="bank" value='<?php echo SCF::get_option_meta('site-settings', 'order_bank_tinkoff' ) ?>'>
-				<input type="hidden" name="inn" value='<?php echo SCF::get_option_meta('site-settings', 'order_inn_tinkoff' ) ?>'>
-				<input type="hidden" name="kpp" value='<?php echo SCF::get_option_meta('site-settings', 'order_kpp_tinkoff' ) ?>'>
-				<input type="hidden" name="rs" value='<?php echo SCF::get_option_meta('site-settings', 'order_rs_tinkoff' ) ?>'>
-				<input type="hidden" name="ks" value='<?php echo SCF::get_option_meta('site-settings', 'order_ks_tinkoff' ) ?>'>
-				<input type="hidden" name="bik" value='<?php echo SCF::get_option_meta('site-settings', 'order_bik_tinkoff' ) ?>'>
+				<input type="hidden" name="bank" value="<?php echo SCF::get_option_meta('site-settings', 'order_bank_tinkoff' ) ?>">
+				<input type="hidden" name="inn" value="<?php echo SCF::get_option_meta('site-settings', 'order_inn_tinkoff' ) ?>">
+				<input type="hidden" name="kpp" value="<?php echo SCF::get_option_meta('site-settings', 'order_kpp_tinkoff' ) ?>">
+				<input type="hidden" name="rs" value="<?php echo SCF::get_option_meta('site-settings', 'order_rs_tinkoff' ) ?>">
+				<input type="hidden" name="ks" value="<?php echo SCF::get_option_meta('site-settings', 'order_ks_tinkoff' ) ?>">
+				<input type="hidden" name="bik" value="<?php echo SCF::get_option_meta('site-settings', 'order_bik_tinkoff' ) ?>">
 
 
 				<div class="formBox__content">
-					<div class="formBox__variant">
+					<!-- <div class="formBox__variant">
 						<div class="formBox__variant-btn">
 							<input id="r1" type="radio" name="reccurent" value="true" checked="checked"/>
 							<label for="r1">ЕЖЕМЕСЯЧНО</label>
@@ -89,7 +90,7 @@
 							<input id="r2" type="radio" name="reccurent" value="false"/>
 							<label for="r2">РАЗОВО</label>
 						</div>
-					</div>
+					</div> -->
 					<div class="formBox__amount">
 						<div class="formBox__subtitle">РАЗМЕР ПОЖЕРТВОВАНИЯ</div>
 						<div class="formBox__amount-content">
@@ -186,25 +187,25 @@
 
 				<input type="hidden" name="amount" value="100000">
 				<input type="hidden" name="orderNumber" value="">
-				<input type="hidden" name="back2app" value="true">
+				<input type="hidden" name="back2app" value="false">
 				<input type="hidden" name="recurringFrequency" value="<?php echo SCF::get_option_meta('site-settings', 'recurringFrequency'); ?>">
 				<input type="hidden" name="recurringExpiry" value="<?php echo date("Ymd", strtotime("+ ".SCF::get_option_meta('site-settings', 'recurringExpiry')." day")); ?>">
 
 				<input type="hidden" name="infoTitle" value="<?php echo SCF::get_option_meta('site-settings', 'order_organization_sber'); ?>">
 				<input type="hidden" name="info" value="<?php echo SCF::get_option_meta('site-settings', 'order_sub_sber'); ?>">
 
-				<input type="hidden" name="bank" value='<?php echo SCF::get_option_meta('site-settings', 'order_bank_sber' ) ?>'>
-				<input type="hidden" name="inn" value='<?php echo SCF::get_option_meta('site-settings', 'order_inn_sber' ) ?>'>
-				<input type="hidden" name="kpp" value='<?php echo SCF::get_option_meta('site-settings', 'order_kpp_sber' ) ?>'>
-				<input type="hidden" name="rs" value='<?php echo SCF::get_option_meta('site-settings', 'order_rs_sber' ) ?>'>
-				<input type="hidden" name="ks" value='<?php echo SCF::get_option_meta('site-settings', 'order_ks_sber' ) ?>'>
-				<input type="hidden" name="bik" value='<?php echo SCF::get_option_meta('site-settings', 'order_bik_sber' ) ?>'>
+				<input type="hidden" name="bank" value="<?php echo SCF::get_option_meta('site-settings', 'order_bank_sber' ) ?>">
+				<input type="hidden" name="inn" value="<?php echo SCF::get_option_meta('site-settings', 'order_inn_sber' ) ?>">
+				<input type="hidden" name="kpp" value="<?php echo SCF::get_option_meta('site-settings', 'order_kpp_sber' ) ?>">
+				<input type="hidden" name="rs" value="<?php echo SCF::get_option_meta('site-settings', 'order_rs_sber' ) ?>">
+				<input type="hidden" name="ks" value="<?php echo SCF::get_option_meta('site-settings', 'order_ks_sber' ) ?>">
+				<input type="hidden" name="bik" value="<?php echo SCF::get_option_meta('site-settings', 'order_bik_sber' ) ?>">
 
 				<!-- Return ?orderId=1193c112-4159-71cf-bf98-a8826a62f72b&lang=ru -->
 				<!-- Return ?orderId=8cf265e5-0fb9-750f-9d98-2e306a62f72b&lang=ru -->
 
 				<div class="formBox__content">
-					<div class="formBox__variant">
+					<!-- <div class="formBox__variant">
 						<div class="formBox__variant-btn">
 							<input id="r10" type="radio" name="reccurentSber" value="true" checked="checked"/>
 							<label for="r10">ЕЖЕМЕСЯЧНО</label>
@@ -213,7 +214,7 @@
 							<input id="r20" type="radio" name="reccurentSber" value="false"/>
 							<label for="r20">РАЗОВО</label>
 						</div>
-					</div>
+					</div> -->
 					<div class="formBox__amount">
 						<div class="formBox__subtitle">РАЗМЕР ПОЖЕРТВОВАНИЯ</div>
 						<div class="formBox__amount-content">

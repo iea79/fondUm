@@ -9,7 +9,7 @@
           foreach ($fs__slider as $item) {
               echo '
                   <div class="firstScreen-slider__item">
-                      <img class="fs-bcg" src="'.wp_get_attachment_url( $item [ 'fs__bcg' ]) .'" alt=""/>
+                      '.wp_get_attachment_image( $item [ 'fs__bcg' ], 'full' ) .'
                   </div>
               ';
           };

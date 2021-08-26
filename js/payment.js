@@ -43,7 +43,9 @@
                     // pdfMake.createPdf(docInfo).download('name.pdf');
                     // pdfMake.createPdf(docInfo).open();
                 } else {
-                    form.submit();
+                    // console.log(form);
+                    // console.log(document.querySelector('.TinkoffPayForm'));
+                    pay(document.querySelector('.TinkoffPayForm')); return false;
                 }
             }
             if (form.hasClass('sberPayForm')) {
@@ -479,7 +481,7 @@
                                                                     style: ['contentLine']
                                                                 },
                                                                 {
-                                                                    text: '40703810962000000018',
+                                                                    text: pdfRS,
                                                                     width: '50%',
                                                                     style: ['contentLine']
                                                                 }
